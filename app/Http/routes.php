@@ -80,7 +80,28 @@ Route::get('/cliente/deletar/{id}', ['uses'=>'ClienteController@deletar','as'=>'
 Route::get('/cliente/detalhe/{id}',['uses'=>'ClienteController@detalhe','as'=>'cliente.detalhe']);
 Route::get('/telefone/adicionar/{id}',['uses'=>'TelefoneController@adicionar','as'=>'telefone.adicionar']);
 Route::post('/telefone/salvar/{id}',['uses'=>'TelefoneController@salvar','as'=>'telefone.salvar']);
+Route::get('/endereco/adicionar/{id}',['uses'=>'EnderecoController@adicionar','as'=>'endereco.adicionar']);
+Route::post('/endereco/salvar/{id}',['uses'=>'EnderecoController@salvar','as'=>'endereco.salvar']);
 
 Route::get('/telefone/editar/{id}', ['uses'=>'TelefoneController@editar','as'=>'telefone.editar']);
 Route::put('/telefone/atualizar/{id}', ['uses'=>'TelefoneController@atualizar','as'=>'telefone.atualizar']);
 Route::get('/telefone/deletar/{id}', ['uses'=>'TelefoneController@deletar','as'=>'telefone.deletar']);
+
+Route::get('/endereco/editar/{id}', ['uses'=>'EnderecoController@editar','as'=>'endereco.editar']);
+Route::put('/endereco/atualizar/{id}', ['uses'=>'EnderecoController@atualizar','as'=>'endereco.atualizar']);
+Route::get('/endereco/deletar/{id}', ['uses'=>'EnderecoController@deletar','as'=>'endereco.deletar']);
+
+Route::get('/produto', ['uses'=>'ProdutoController@index','as'=>'produto.index']);
+Route::get('/produto/adicionar', ['uses'=>'ProdutoController@adicionar','as'=>'produto.adicionar']);
+Route::post('/produto/salvar', ['uses'=>'ProdutoController@salvar','as'=>'produto.salvar']);
+Route::get('/produto/editar/{id}', ['uses'=>'ProdutoController@editar','as'=>'produto.editar']);
+Route::put('/produto/atualizar/{id}', ['uses'=>'ProdutoController@atualizar','as'=>'produto.atualizar']);
+Route::get('/produto/deletar/{id}', ['uses'=>'ProdutoController@deletar','as'=>'produto.deletar']);
+
+Route::get('/produto/detalhe/{id}',['uses'=>'ProdutoController@detalhe','as'=>'produto.detalhe']);
+Route::get('/categoria/adicionar/{id}',['uses'=>'CategoriaController@adicionar','as'=>'categoria.adicionar']);
+Route::post('/categoria/salvar/{id}',['uses'=>'CategoriaController@salvar','as'=>'categoria.salvar']);
+
+Route::get('/categoria/editar/{id}', ['uses'=>'CategoriaController@editar','as'=>'categoria.editar']);
+Route::put('/categoria/atualizar/{id}', ['uses'=>'CategoriaController@atualizar','as'=>'categoria.atualizar']);
+Route::get('/categoria/deletar/{id}', ['uses'=>'CategoriaController@deletar','as'=>'categoria.deletar']);

@@ -21,6 +21,7 @@
             <ul class="nav navbar-nav">
                 @if (!Auth::guest())
                 <li><a href="{{ route('cliente.index') }}">Cliente</a></li>
+                <li><a href="{{ route('produto.index') }}">Produto</a></li>
                 @endif
             </ul>
 

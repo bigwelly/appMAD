@@ -21,6 +21,7 @@
             <ul class="nav navbar-nav">
                 <?php if(!Auth::guest()): ?>
                 <li><a href="<?php echo e(route('cliente.index')); ?>">Cliente</a></li>
+                <li><a href="<?php echo e(route('produto.index')); ?>">Produto</a></li>
                 <?php endif; ?>
             </ul>
 
